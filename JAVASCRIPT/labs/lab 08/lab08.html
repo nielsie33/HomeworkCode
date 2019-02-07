@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 08</title>
+	</head>
+	<body>
+		<h2>Lab 08</h2>
+		<script>
+			var vandaag = new Date();
+			var factuurdatum = new Date(vandaag - 86400000 * 17);
+			var termijn = new Date(86400000 * 30);
+			var betaaltijd = (factuurdatum.getTime() + termijn.getTime());
+			var betaaldatum = new Date(betaaltijd);
+			document.write("<br>Vandaag: " + vandaag);
+			document.write("<br>Factuurdatum: " + factuurdatum);
+			document.write("<br>Betaaldatum: " + betaaldatum);
+			if (vandaag > betaaldatum) {
+				alert('Meld Incassobureau')
+			} else {
+				var resterende = (betaaldatum - vandaag) / 86400000;
+				document.write("<br>U hebt nog: " + resterende + " dagen om te betalen.")
+			}
+		</script>
+	</body>
+</html>

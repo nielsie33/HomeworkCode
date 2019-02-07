@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>De for-lus(lab11)</title>
+		<!-- script: werkt met de for-lus -->
+	</head>
+	<body>
+		<script>
+		var getal = new Array();
+		getal[0] = 'nul';
+		getal[1] = 'een';
+		getal[2] = 'twee';
+		getal[3] = 'drie';
+		getal[4] = 'vier';
+		getal[5] = 'vijf';
+		getal[6] = 'zes';
+		getal[7] = 'zeven';
+		getal[8] = 'acht';
+		getal[9] = 'negen';
+		
+		var telefoonprompt = prompt('Wat is je telefoonnummer?');
+		document.write('<br>' + telefoonprompt + '<br>Je telefoonnummer is:');
+		
+		for(x=0;x<telefoonprompt.length;x++) {
+		nummer = telefoonprompt.charAt(x);
+		document.write(' ' + getal [nummer]);
+		}
+		
+		</script>
+	</body>
+</html>

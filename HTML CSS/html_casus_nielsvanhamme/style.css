@@ -1,0 +1,154 @@
+header {
+	background-color: #52bad5;
+    width: 98.8%;
+	height:75px;
+    margin:0px auto;
+	color: white;
+	position: absolute;
+	top: 0;
+}
+
+body {
+	width: 98.8%;
+}
+
+.leftbox {
+	float:left;
+	width:50%;
+}
+.rightbox {
+	float:right;
+	width:50%
+}
+.foto1 {
+	margin-top:40px;
+	margin-bottom: 40px;
+	margin-left: 200px;
+	width: 300px;
+	height: auto;
+	text-align:center;
+}
+.foto2 {
+	margin-top:0px;
+	margin-bottom: 0px;
+	margin-left: 100px;
+	width: 400px;
+	height: auto;
+	text-align:center;
+}
+
+.foto3 {
+	margin-left: 200px;
+	width: 300px;
+	height: auto;
+	text-align:center;
+}
+.article8 {
+	font-size: 17px;
+	text-align: left;
+	margin-top: -1%;
+	margin-left: 0%;
+	padding: 17px 17px 17px 17px;
+}
+nav {
+    width: 100%;
+}
+
+nav{
+    border-width:1px 0;
+    list-style:none;
+    background-color: #B3B3B3;
+    margin:0;
+    padding:0;
+    text-align:center;
+	margin-top: 75px;
+}
+
+nav li{
+	float: left;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display:inline-block;
+    padding:10px;
+	font-size: 20px;
+}
+nav ul {
+    text-align: center;
+    margin: 0 0 0 0;
+    padding-left: 0;
+}
+p{
+	color: gray;
+}
+* {
+	font-family: "Source Sans Pro", Arial;
+}
+nav ul li {
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #B3B3B3;
+	height: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #717070;
+}
+
+footer {
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: 0;
+	float: left;
+	text-align: center;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: gray;
+}
+
+
+
+#tabel, #row td{
+	
+	border-style: double;
+
+}
+#tabel{
+	width: 400px;
+	margin-bottom: 100px;
+
+}
+td{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#row2 td{
+	padding:auto;
+}
+table{
+	margin: auto;
+}

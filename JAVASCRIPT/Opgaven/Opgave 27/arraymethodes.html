@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Array methodes</title>
+	</head>
+	<body>
+		<script>
+			var studenten = new Array(
+				'Zakaria', 'Albert', 'Hamsa', 'Mike', 'Pieter');
+			document.write('<br>Opgave 24: Studenten: ' + studenten);
+			team = studenten;
+			document.write('<br>Opgave 25: Team: ' + team);
+			team[0] = 'Umut';
+			document.write(
+			'<br>Opgave 26: Element [0] is gewijzigd: ' + studenten);
+			studenten.shift();
+			document.write(
+			'<br>Opgave 27: Resultaat van shift: '+studenten);
+		</script>
+	</body>
+</html>

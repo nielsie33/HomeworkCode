@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 16</title>
+		    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	
+		<form name="form">
+			Selecteer maand:
+			<select id="maand" name = "maand" placeholder="maand">
+				<option value= "0">Januari</option>
+				<option value="01">Februari</option>
+				<option value="02">Maart</option>
+				<option value="03">April</option>
+				<option value="04">Mei</option>
+				<option value="05">Juni</option>
+				<option value="06">Juli</option>
+				<option value="07">Augustus</option>
+				<option value="08">September</option>
+				<option value="09">Oktober</option>
+				<option value="10">November</option>
+				<option value="11">December</option>
+			</select>
+			Selecteer jaar:
+			<select id="jaar" name = "jaar" placeholder="jaar">
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+			</select>
+			<input type="button" 
+			name="verzend" value="Print Calendar" onclick="kalender();" />
+			</form>
+			<div id="calendar"></div>
+		
+		<script>  
+		function onload() { 
+			maand = document.getElementById("maand").value;
+			jaar = document.getElementById("jaar").value;
+		}
+		function kalender(){
+			var maand = parseInt(document.getElementById("maand").value);
+			var jaar = parseInt(document.getElementById("jaar").value);
+			var datum = new Date(jaar,maand,1);
+			var eersteweekdag = datum.getDay();
+			var datum = new Date(jaar,maand+1,0);
+			var laatstedag = datum.getDate();
+			var maandnaam = new Array(); 
+			maandnaam[0] = "Januari"; 
+			maandnaam[1] = "Februari"; 
+			maandnaam[2] = "Maart";
+			maandnaam[3] = "April";
+			maandnaam[4] = "Mei";
+			maandnaam[5] = "Juni";
+			maandnaam[6] = "Juli";
+			maandnaam[7] = "Augustus";
+			maandnaam[8] = "September";
+			maandnaam[9] = "Oktober";
+			maandnaam[10] = "November";
+			maandnaam[11] = "December";
+			var weekdag = new Array(); 
+			weekdag[0] = "zo"; 
+			weekdag[1] = "ma"; 
+			weekdag[2] = "di"; 
+			weekdag[3] = "wo"; 
+			weekdag[4] = "do"; 
+			weekdag[5] = "vr"; 
+			weekdag[6] = "za";
+
+
+			calendar = "<div id='maandnaam'>"+maandnaam[maand]+" "+jaar+ "</div>";
+			for(x=0;x<7;x++){
+				calendar += "<div id='weekdag'>" +weekdag[x]+"</div>";
+			}
+			calendar += "<br>";
+			
+			for(x=1;x<=eersteweekdag;x++){
+				calendar += "<div id='dag'>&nbsp;</div>";
+			}
+
+			for(x=1;x<=laatstedag;x++){
+				   calendar += "<div id='dag'>" +x+"</div>";
+			}
+			document.getElementById('calendar').innerHTML = calendar;
+		}
+		</script>
+	</body>
+</html>

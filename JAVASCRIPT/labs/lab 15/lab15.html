@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 15</title>
+	</head>
+	<body>
+		<form id="form" name="form">
+			<input id="input1" type="text" name="woord" placeholder="Vul woord in">
+			<input id="input2" type="text" name="nieuwewoord" placeholder="Vul nieuwewoord in">
+
+			<input type= "button" value="Vervangen"
+				onclick="javascript: vervangen()">
+		</form>	
+		<script>
+		document.write('Dit document is een lang document maar ook een simpel document');
+		
+		function vervangen() {
+		var input1 = document.getElementById("input1").value;
+		var input2 = document.getElementById("input2").value;
+		var tekst = 'Dit document is een lang document maar ook een simpel document';
+		var resultaat = tekst.replace(new RegExp(input1, 'g'), input2);
+			document.write(resultaat);
+		}
+		</script>	
+	</body>
+</html>

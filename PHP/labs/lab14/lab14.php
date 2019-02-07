@@ -1,0 +1,39 @@
+<?php 
+// superglobal scope
+$GLOBALS['url'] = "www.mijndomeinnaam.nl";
+// globale scope
+global $email;
+$email = "webmaster@mijndomeinnaam.nl";
+
+// globale constanten
+define("BIJDRAGE",0.10);
+
+function doneren($bedrag) {
+	// function scope
+	$melding = "GIRO 555";
+	echo "<br>" . $melding;
+	echo "<br>URL: " . $GLOBALS["url"];
+	echo "<br>Bedrag: " . $bedrag;
+	global $email;
+	echo "<br>E-mail: " . $email;
+	$bijdrage = $bedrag * BIJDRAGE;
+	$donatie = $bedrag + $bijdrage;
+	echo "<br>Inclusief bijdrage: $donatie";
+	static $pot;
+	$pot = $pot + $donatie;
+	echo "<br><span style='background-color:yellow'>
+	Totaal bedrag in pot $pot</span><br>";
+	static $hoogste;
+	$hoogste = max($donatie, $hoogste);
+	echo "Hoogste donatie tot nu toe is: $hoogste<br>";
+}
+doneren(100);
+doneren(1000);
+doneren(33333);
+doneren(67667);
+doneren(2);
+doneren(20);
+doneren(88888);
+doneren(1212);
+doneren(33);
+?>

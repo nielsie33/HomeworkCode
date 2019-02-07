@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 10</title>
+	</head>
+	<body>
+		<h2>Lab 10</h2>
+		<script src="lab10.js"></script>
+	</head>
+	<body>
+		<form name='form'>
+			<input type="text" name="bedrag" placeholder="vul bedrag in">
+			<select name="conversie"> 
+			<option value="dollar">dollar/euro</option>
+			<option value="euro">euro/dollar</option>
+			<option value="euros">ruble/euro</option>
+			<option value="roebel">euro/ruble</option>
+			</select>
+			<input type= "button" value="converteren"
+				onclick="document.write('conversie: ' + exchange(document.form.bedrag.value,document.form.conversie.value))">
+		</form>		
+	</body>
+</html>

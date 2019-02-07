@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="blogcss.css">
+</head>
+<body>
+	<div id="wrapperHeader">
+	 <div id="header">
+	 </div> 
+	</div>
+	<center><h1> Blog posten </h1></center>
+	<center><h5>Op de vorige pagina kunt u uw email zien en uitloggen.</h5></center>
+	<center><a href="welkom.php"><input type="button" name="terug" value="Terug naar vorige pagina"></a></center>
+	<center><a href="blogs.php"><input type="button" name="volgende" value="Klik hier om blogs van anderen te lezen"></a></center>
+	<form id="blogform" action="blogs.php" method="post"><center><br>
+	Blog typen
+		<textarea name="text" placeholder="Type hier uw blog..." required></textarea>
+		<input type="submit" name="submit" value="Verzenden"/>
+		<input type="reset" name="reset" value="Reset" />
+	</form>
+</body>
+</html>

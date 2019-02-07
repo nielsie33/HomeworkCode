@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="all">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="responsive.css">
+        <title>Formulier</title>
+
+    </head>
+    <body>
+	<header>
+		<h1><center>header</center></h1>
+	</header>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="#">Info</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+		
+		<img id="foto" src="appel.jpg"/>
+            
+         </div>
+        <form name="formulier"
+			action = "mailto: 219188@student.scalda.nl"
+			method = "post">
+		<fieldset>
+			<legend>Formulier</legend>
+			
+			<label for="geslacht">Geslacht: </label>
+			Man <input type="radio" name="geslacht" value="M">
+			Vrouw <input type="radio" name="geslacht" value="V">
+			<br>
+			
+			<input required type="text" placeholder="Woonplaats" name="woonplaats"
+				id="woonplaats" list="steden">
+				<datalist id="steden">
+					<option value="Amsterdam">
+					<option value="Utrecht">
+					<option value="Antwerpen">
+					<option value="Apeldoorn">
+					<option value="Brussel">
+					<option value="Rotterdam">
+				</datalist>
+				<br>
+			
+			<input required type="text" id="naam"
+				name="naam" placeholder="Naam"><br>
+			<input required type="email" id="email"
+				name="email" placeholder="E-mail"><br>
+				
+			<br>
+			<label for="bericht">Bericht:</label><br>
+			<textarea placeholder="Schrijf een commentaar..."></textarea><br>
+		</fieldset>
+		<input type="submit" id="verzend"
+		name="verzend" value="Verzend">
+		</form>
+		</div>
+        <footer>
+			<p>Copyright &copy; 2017 <i>Ontworpen door: xxx</i>
+			Alle rechten voorbehouden</p>
+        </footer>
+    </body>
+</html>

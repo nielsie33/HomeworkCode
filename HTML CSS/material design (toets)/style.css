@@ -1,0 +1,279 @@
+
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #lightgray;
+    overflow: auto;
+}
+body{
+    width: 96%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    background-color: lightgray;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+main {
+	width: 100%;
+	margin: 0;
+	padding-bottom: 3%;
+}
+
+legend {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+form {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+fieldset{
+	border: solid 2px gray;
+	width: 70%;
+	margin: auto;
+	border-radius: 2%;
+	background-image: linear-gradient(to bottom, hsl(0, 80%, 50%), #bfc6a7);
+}
+
+input, select, textarea {
+	border: solid 1px rgb(0, 0, 0);
+	margin: 5px;
+	padding: 5px 30px 5px 30px;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+input:focus, textarea:focus{
+	box-shadow: 6px 6px 10px #bfc6a7;
+}
+
+select {
+	width: 35%;
+}
+
+input[type=date]{
+	width: 25%;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	width: 4%;
+}
+
+input[type=submit] {
+	background-color: #bfc6a7;
+	width: 43%;
+	opacity: 0.6;
+}
+
+input[type=submit]:hover {
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
+#contact {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	text-align: justify;
+	line-height: 1.6em;
+}
+
+#contact span {
+	font-size: 1.3em;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 4px;
+	text-transform: uppercase;
+}
+
+input[type=submit]:hover{
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
+.tabs {
+	top: 150px;
+	right: 0;
+	left: 0;
+	text-align: center;
+}
+.tab {
+	display: inline-block;
+	position: relative;
+	border-radius: 4px;
+	margin: 10px;
+	overflow: hidden;
+	text-align: center;
+	width: 20%;
+	height: 50px;
+	line-height: 48px;
+	box-shadow: 0px 2px 10px rbga(0, 0, 0, 0.5);
+}
+.tab:hover {
+	box-shadow: 0px 5px 10px rbga(0, 0, 0, 0.5);
+}
+
+#tab1{
+	background-color: #F4DB33;
+}
+#tab2{
+	background-color: #0cc2f4;
+}
+#tab3{
+	background-color: #ff1500;
+}
+
+.cards {
+	position: relative;
+	top: 50px;
+	left: 140px;
+	height: 300px;
+	width: 80%;
+	border-radius: 4px;
+	text-align: start;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.content-left {
+	float: left;
+	width: 22%;
+	height: 300px;
+	padding: 15px;
+	text-align: center;
+}
+.content-right {
+	padding-top: 15px;
+	padding-left: 15px;
+	float: right;
+	width: 60%;
+	height: 300px;
+}
+.x-icon {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	font-size: 2.5em;
+	background-color: #70c26f;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.x-icon:hover{
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#card1 .content-left{
+	background-color: #F4DB33;
+}
+#card2 .content-left {
+	background-color: #0cc2f4;
+}
+#card3 .content-left{
+	background-color: #ff1500;
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3, .3, .3);
+		transform: scale3d(.3, .3, .3);
+	}
+	50% {
+		opacity: 0.5;
+	}	
+}
+
+.cards {
+	-webkit-animation-name: zoomIn;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	
+	-moz-animation-name: zoomIn;
+	-moz-animation-duration: 0.6s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	
+	animation-name: zoomIn;
+	animation-duration: 0.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: gray;
+}
+
+.active {
+    background-color: red;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

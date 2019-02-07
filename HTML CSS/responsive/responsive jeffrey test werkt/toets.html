@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Oefentoets Html-Css</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="toets.css">
+        <link rel="stylesheet" href="responsive.css">
+    </head>
+    <body>
+        <header id="header">
+            Header
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">menu 1</a></li>
+                <li><a href="playlist.html">menu 2</a></li>
+                <li><a href="formulier.html">menu 3</a></li>
+                <li><a href="contact.html">menu 4</a></li>
+            </ul>
+        </nav>
+
+        <form 
+            name="formulier"
+            action = "mailto: 219880@student.scalda.nl"
+            method = "post">
+           
+                <label for="geslacht">Geslacht: </label>
+                Man <input type="radio" name="geslacht" value="M">
+                Vrouw <input type="radio" name="geslacht" value="V"><br><br>
+
+                <legend>Contact</legend>
+
+                <input required type="text" placeholder="Woonplaats" name="woonplaats"
+                       id="woonplaats" list="steden">
+                <datalist id="steden">
+                    <option value="Amsterdam">
+                    <option value="Utrecht">
+                    <option value="Antwerpen">
+                    <option value="Apeldoorn">
+                    <option value="Brussel">
+                    <option value="Rotterdam">
+                </datalist><br><br>
+
+                <input required type="text" id="naam"
+                       name="naam" placeholder="Naam"><br><br>
+
+                <input required type="email" id="email"
+                       name="email" placeholder="E-mail"><br><br>
+
+
+                <textarea id="textarea1" rows="7" cols="25" name="opmerkingen" maxlength="400">Type je bericht</textarea>
+                <input id="verzend" type="submit" value="Verzenden" /><br>
+            
+        </form>
+
+        <img id="hond" src="123.jpg" alt=""/>
+
+    </body>
+    <footer>
+        <div>Footer</div>
+    </footer>
+</html>

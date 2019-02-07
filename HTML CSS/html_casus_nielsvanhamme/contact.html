@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="responsive.css">
+        <title>Da Compaany</title>
+
+    </head>
+    <body>
+	<header>
+		<h1><center>Da Compaany</center></h1>
+	</header>
+        <nav>
+			<ul>
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="#">Portfolio</a></li>
+			  <li><a href="projects.html">Projects</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			</ul>
+        </nav>
+		<div class="rightbox">
+			<img class="foto2" src="img/contact.jpg"/>
+			</div>
+			<form name="formulier"
+			action = "mailto: 219188@student.scalda.nl"
+			method = "post">
+			<label for="checker">Check one of below: </label>
+			Company <input type="radio" name="checker" value="C">
+			Private <input type="radio" name="checker" value="P">
+			<br>
+				<input required type="text" placeholder="city" name="woonplaats"
+				id="woonplaats" list="steden">
+				<datalist id="steden">
+					<option value="New york">
+					<option value="Washington">
+					</datalist>
+				<div class="row">
+					<label for="name">Your name:</label><br />
+					<input id="name" class="input" placeholder="name" name="name" type="text" value="" size="30" /><br />
+				</div>
+				<div class="row">
+					<label for="email">Your email:</label><br />
+					<input id="email" class="input" placeholder="email" name="email" type="text" value="" size="30" /><br />
+				</div>
+				<div class="row">
+					<label for="message">Your message:</label><br />
+					<textarea id="message" placeholder="mail your message" class="input" name="message" rows="7" cols="30"></textarea><br />
+				</div>
+				<input id="submit_button" type="submit" value="Send email" />
+			</form>						
+		<footer>
+			<p style="color:white;">&copy; 2016 -
+			PROUDLY EXISTING</p>
+        </footer>
+</body>
+</html>

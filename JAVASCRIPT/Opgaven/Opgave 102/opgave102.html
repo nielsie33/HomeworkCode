@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Opgave 102</title>
+		<script src="dom-events.js"></script>
+		<script>
+			document.write('<form name="klok"> ' + '<input type="text" ' +
+			'name="display" '+ 'size="8" '+
+			'style="background-color: #30CE28; font-size: 44px"> ' + '</form>');
+			var nu = new Date();
+			var uur = nu.getHours();
+			var min = nu.getMinutes();
+			var sec = nu.getSeconds();
+			var alterneren = 0;
+			function showklok() {
+				min=((min < 10) ? '0': '') + min;
+				if(alterneren) {
+				document.klok.display.value=uur + ':' + min + ':' + sec;
+				alterneren = 0;
+				} else {
+				document.klok.display.value=uur + ':' + min + ':' + sec;
+				alterneren = 1;
+				}
+				nu = new Date(); uur = nu.getHours(); min = nu.getMinutes(); sec = nu.getSeconds();
+				setTimeout('showklok()',1000);
+			}
+		</script>
+		</head>
+	<body onload="showklok();">
+		<div>
+		<a href="Javascript: showMedia();">
+		<img src="ipad.jpg" id="media"
+			onmouseover="this.width=this.width*1.5"
+			onmouseout="this.width=this.width/1.5">
+		</a>
+		
+		<form onsubmit="functie()" name="costform" method="POST">
+		<fieldset style="width:100px">
+			<legend>Bestelformulier</legend>
+			<label for="man">Man: </label>
+				<input type="radio" name="geslacht" id="man" value="m">
+			<label for="vrouw">vrouw: </label>
+				<input type="radio" name="geslacht" id="vrouw" value="v">
+			<br>
+			<input required type="text" id="naam" name="naam" placeholder="vul uw voornaam in"><br>
+			<input required type="text" id="achternaam" name="achternaam" placeholder="vul uw achternaam in"><br>
+			<input required type="text" id="leeftijd" name="leeftijd" placeholder="vul uw leeftijd in"><br>
+			<input required type="text" id="woonplaats" name="woonplaats" placeholder="vul uw woonplaats in"><br>
+			<input required type="text" id="postcode" name="postcode" placeholder="vul uw postcode in"><br>
+			<input required type="email" id="email"	name="email" placeholder="vul uw email in"><br>
+			<input required type="text" id="mobiel" name="mobiel" placeholder="vul uw 06 in"><br>
+			<input required type="text" id="wachtwoord" name="wachtwoord" placeholder="vul uw wachtwoord in"><br>
+			<input required type="text" id="wwnogmaals" name="wwnogmaals" placeholder="wachtwoord nogmaals"><br>
+		</fieldset>
+		<fieldset style="width:173px">
+			<label for="telefoon">Smartphone: </label>
+				<input type="checkbox" name="smartphone" id="smartphone" value="smartphone"><br>
+			<label for="computer">Laptop: </label>
+				<input type="checkbox" name="laptop" id="laptop" value="laptop"><br>
+			<label for="ipad">Tablet: </label>
+				<input type="checkbox" name="tablet" id="tablet" value="tablet"><br>
+			<select name="weekdag">
+				<option value="dag">Dag</option>
+				<option value="maandag">Maandag</option>
+				<option value="dinsdag">Dinsdag</option>
+				<option value="woensdag">Woensdag</option>
+				<option value="donderdag">Donderdag</option>
+				<option value="vrijdag">Vrijdag</option>
+				<option value="zaterdag">Zaterdag</option>
+				<option value="zondag">Zondag</option>
+			</select>
+			<br><br>
+			<input type="submit" id="verzend" name="verzend" value="Verzenden">
+		</fieldset>
+		</form>
+	</body>
+</html>

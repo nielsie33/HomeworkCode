@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Date Object</title>
+	</head>
+	<body>
+		<script>
+			var vandaag = new Date();
+			document.write('<br>Opgave 46: '+ vandaag);
+			
+			var nu = Date.now();
+			var eenDag = 86400000;
+			var morgen = new Date(nu + eenDag);
+			document.write("<br>Opgave 47: De datum morgen is: " + morgen);
+		</script>
+	</body>
+</html>

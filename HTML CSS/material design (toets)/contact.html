@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="all">
+        <meta name="language" content="Dutch">
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="responsive.css">
+        <title>Contact</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+				<a href="windsurf.html" class="dropbtn">Windsurfing</a>
+				<div class="dropdown-content">
+					<a href="mountain.html">Mountainclimbing</a>
+					<a href="snorkelen.html">Snorkelen</a>
+                <li style="float:right"><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+         </div>
+		<main>
+			<p id="contact">
+			<h1> VUL HIER UW FEEDBACK IN </h1>
+			</p>
+			<form name="formulier"
+			action = "mailto: 219188@student.scalda.nl"
+			method = "post">
+				<fieldset>
+					<legend>Feedback</legend>
+			
+					<input required type="text" id="naam"
+						name="naam" placeholder="Naam"><br>
+					<input required type="email" id="email"
+						name="email" placeholder="E-mail"><br>
+					<input required type="text" id="mobiel"
+						name="mobiel" placeholder="Mobiel"><br><br><br><br><br>
+					<textarea placeholder="Tik je vraag of commentaar in ..."></textarea><br>
+				</fieldset>
+				<input type="submit" id="verzend"
+					name="verzend" value="Verzend">
+			</form>
+		</main> 
+    </body>
+</html>

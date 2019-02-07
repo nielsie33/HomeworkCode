@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>De for-lus</title>
+		<!-- script: werkt met de for-lus -->
+	</head>
+	<body>
+		<script>
+		for(x=0;x<3;x++) {
+			document.write('<br>Dit is lus: ' + x);
+		}
+		
+		var student = new Array('Zakaria','Albert','Hamsa','Mike','Pieter','Harry');
+		for(x=0;x<student.length;x++) {
+		if ((x % 2) !== 1)
+		document.write('<br>Element ' + x + ' is ' + student[x]);
+		}
+		
+		var tekst = 'Hij lijkt een beetje op Nelson Mandela.';
+		lengte = tekst.length;
+		letter = 0;
+		letter1 = 0;
+		letter2 = 0;
+		letter3 = 0;
+		letter4 = 0;
+		document.write('<br>');
+		for(x=0; x<lengte; x++) {
+		teken = tekst.charAt(x);
+		document.write(teken);
+		if(teken == 'a'){
+			letter++;
+			}
+		if(teken == 'e'){
+			letter1++;
+			}
+		if(teken == 'i'){
+			letter2++;
+			}
+		if(teken == 'o'){
+			letter3++;
+			}
+		if(teken == 'u'){
+			letter4++;
+			}
+		}
+		document.write("<br>Aantal a's: " + letter);
+		document.write("<br>Aantal e's: " + letter1);
+		document.write("<br>Aantal i's: " + letter2);
+		document.write("<br>Aantal o's: " + letter3);
+		document.write("<br>Aantal u's: " + letter4);
+		</script>
+	</body>
+</html>

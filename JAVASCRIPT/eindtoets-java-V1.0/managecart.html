@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Manage Cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="cookiefuncties.js"></script>
+        <script src="shoppingcart.js"></script>
+        <style>
+            table{
+                width: 70%;
+                border-style: solid;
+            }
+            th{
+                background-color: #cccccc;
+            }
+            td{
+                width: 25%;
+                font-weight: bold;
+                text-align: center;
+            }
+            input{
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Overzicht van Uw shoppingcart:</p>
+        <p>Totale gewicht: <script>document.write(i=GetTotaalGewicht().toFixed(2));</script></p>
+        <p>Verzendkosten zijn: <script>document.write(verzendkosten(i).toFixed(2));</script></p>
+        <form action="mailto: webshop@xxlcomputers.nl"
+              enctype="text/plain"
+              onsubmit="return checkForm(this);"
+              method="post">
+            <table><tr>
+                    <th> ID </th>
+                    <th> Merk </th>
+                    <th> Model </th>
+                    <th> Geheugen </th>
+                    <th> Prijs </th>
+                    <th> Gewicht</th>
+                    <th> Aantal</th>
+                    <th> Bedrag </th>
+                    <th> Totaal Gewicht  </th>
+                    <th> Delete </th>
+                </tr>
+                <script>
+                    cartWeergeven();
+                </script>
+            </table>
+            <br><br>
+            <input required type="text" id="naam"
+                   name="naam" placeholder="Klantnaam:"><br><br>
+            <input required type="text" id="achternaam"
+                   name="email" placeholder="Achternaam:"><br><br>
+            <input required type="text" id="straat"
+                   name="mobiel" placeholder="Straat"><br><br>
+            <input required type="text" id="nummer"
+                   name="nummer" placeholder="Nummer:"><br><br>
+            <input required type="text" id="postcode"
+                   name="postcode" placeholder="Postcode:"><br><br>
+            <input required type="text" id="plaats"
+                   name="plaats" placeholder="Plaats:"><br><br>
+            <input required type="text" id="e-mail"
+                   name="mail" placeholder="e-mail:"><br><br>
+            <a href="xxlcomputers.html">Terug</a><br><br>
+            <a onclick="verwijderAlleCookies()" href="managecart.html">Leeg maken</a><br><br>
+            <input type="submit" id="verzend"
+                   name="Verzend" value="Check out"><br><br>
+        </form>
+    </body>
+</html>

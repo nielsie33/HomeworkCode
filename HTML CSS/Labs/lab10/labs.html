@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+	<link rel="stylesheet" type="text/css" href="labs.css">
+	</head>
+	<body>
+	<main>
+        <form name="formulier"
+			action = "mailto: 219188@student.scalda.nl"
+			method = "post">
+		<fieldset>
+			<legend>Inschrijfformulier</legend>
+			
+			<select required naam="cursus" id="cursus">
+				<option value="0">Kies een Cursus</option>
+				<option value="cursus1">Cursus 1</option>
+				<option value="cursus2">Cursus 2</option>
+				<option value="cursus3">Cursus 3</option>
+			</select><br>
+			
+			<select required naam="lokatie" id="lokatie">
+				<option value="0">Kies een Lokatie</option>
+				<option value="lokatie1">Lokatie 1</option>
+				<option value="lokatie2">Lokatie 2</option>
+				<option value="lokatie3">Lokatie 3</option>
+			</select><br>
+			
+			<label for="datum">Begindatum: </label> <br>
+			<input required type="date" name="datum" id="datum"> <br>
+			<label for="opleiding">Selecteer opleiding: </label>
+			BOL <input type="radio" name="opleiding" value="M">
+			BBL <input type="radio" name="opleiding" value="V">
+			<br>
+			<input required type="text" id="naam"
+				name="naam" placeholder="Voornaam"><br>
+			<input required type="text" id="achternaam"
+				name="achternaam" placeholder="Achternaam"><br>
+			<input required type="text" id="adres"
+				name="adres" placeholder="Adres"><br>
+			<input required type="text" id="woonplaats"
+				name="woonplaats" placeholder="Woonplaats"><br>
+			<input required type="email" id="email"
+				name="email" placeholder="E-mail"><br>
+			<input required type="text" id="mobiel"
+				name="mobiel" placeholder="Mobiel"><br>
+				
+			Geef je voorkeur aan:<br>
+			Avondschool:
+			<input type="checkbox" name="box"
+					id="box" value="box"><br>
+			Weekendschool:
+			<input type="checkbox" name="box"
+					id="box" value="box"><br>
+			Geen voorkeur:
+			<input type="checkbox" name="box"
+					id="box" value="box"><br>
+			<label for="ranking">Wat is je opleidingsniveau</label><br>
+			<input type="range" name="ranking" id="ranking" min="1" max="5">
+		</fieldset>
+		<input type="submit" id="verzend"
+		name="verzend" value="Verzend">
+		</form>
+    </main> 
+  </body>
+</html>

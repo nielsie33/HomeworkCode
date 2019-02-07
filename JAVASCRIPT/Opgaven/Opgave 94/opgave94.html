@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Opgave 94</title>
+	</head>
+	<body>
+		<script>
+			var lengte = parseInt(prompt('Voer een getal in:'));
+			piramide = new Array(lengte);
+			for(var i = 0; i <=lengte; i++){
+				piramide[i] = i;
+			}
+			document.write(piramide);
+			for(var rij=1; rij <= lengte; rij++) {
+				document.write('<br>');
+				for (var i = 0; i < rij; i++) {
+					document.write(piramide[i]);
+				}
+			}
+		</script>
+	</body>
+</html>

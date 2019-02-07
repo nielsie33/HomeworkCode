@@ -1,0 +1,9 @@
+$auto2 is goed
+$auto's is fout
+$auto/onderdelen is fout
+$thuis&tuin is fout
+$naw is goed
+$n-a-w is fout
+$n_a_w is goed
+$22 is goed
+$$ is fout

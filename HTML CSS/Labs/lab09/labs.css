@@ -1,0 +1,23 @@
+
+div, #row td{
+	
+	border-style: double;
+
+}
+div{
+	width: 400px;
+	
+	background: linear-gradient(red, orange, yellow);
+
+}
+td{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#row2 td{
+	padding:auto;
+}
+table{
+	margin: auto;
+	background: linear-gradient(red, orange, yellow);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 15</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            tekst = 'Dit document is een lang document maar ook een simpel document';
+            function vervangen(tekst, woord, nieuwwoord) {
+                splitsing = tekst.split(' ');
+            var nieuwetekst = '';
+                for (x = 0; x < splitsing.length; x++) {
+                    if (splitsing[x] == woord) {
+                        splitsing[x] = nieuwwoord;
+                    }
+                }
+
+                for(x = 0; x < splitsing.length; x++) {
+                    nieuwetekst = nieuwetekst + splitsing[x] + ' ';
+                }
+                return nieuwetekst;
+            }
+            resultaat = vervangen(tekst, 'document', 'script');
+            document.write(resultaat);
+        </script>
+    </body>
+</html>

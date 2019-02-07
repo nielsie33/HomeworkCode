@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 17</title>
+	</head>
+	<body>
+            <h3>Lingo algoritme</h3>
+            <h4>Je hebt maar 4 gokken, als je 4 x geklikt hebt op de knop, word de knop uitgeschakeld.</h4>
+            <h4>Je krijgt 1 punt per letter.</h4>
+            <label>Typ een woord in:</label>
+            <input type="text" value="" id="woord">
+            <button type="button" id="checkbutton" onclick="lingo()">Check</button>
+            <button type="button" onclick="herlaad()">Pagina herladen</button>
+            <br><br>
+            <p><b>Woorden geprobeerd:</b></p>
+            <p id="proberen">-----</p>
+
+        <script type="text/javascript">
+            count=0;
+			var steden = new Array('amsterdam','barcelona','londen','parijs','berlijn','antwerpen','rome','madrid');
+			var randomsteden = steden[Math.floor(Math.random() * steden.length)]; 
+			var randomsteden = randomsteden.toLowerCase();
+            var probeer = new Array();
+
+            function lingo()
+            {
+				count++;
+				if(count == 4) {
+					document.getElementById('checkbutton').disabled = true;
+					alert('Je hebt het te vaak geprobeerd! herlaad de pagina om opnieuw te proberen.');
+				}
+				
+                var woord = document.getElementById("woord").value;
+                var woord = woord.toLowerCase();
+                if(woord == "")
+                    {
+                        alert("Je bent vergeten een woord in te typen!");
+                        return;
+                    }
+					
+                probeer.push(woord); 
+                document.getElementById("proberen").innerHTML=probeer; 
+
+                var checkWoord = woord.split(''); 
+                var checkRandom = randomsteden.split(''); 
+				
+				masker(checkRandom, checkWoord);
+            }
+			
+			function masker(steden, woord)
+			{
+			  var output = "";
+			  var punten = "";
+			  for(var i=0; i < steden.length; i++) {
+				 if(woord.indexOf(steden[i]) > -1)
+				 {
+					output += steden[i];	
+					punten += steden[i];	
+				 }
+				 else
+				 {
+					output += "?";
+				 }
+			  }
+			   document.getElementById("hidden").innerHTML = output;
+			   document.getElementById("punten").innerHTML = punten.length;
+			}
+			function herlaad() {
+				location.reload();
+			}
+        </script>
+        <p id="hidden"><script>
+            var lengte = randomsteden.length;
+			document.write(Array(lengte+1).join("?"));
+        </script></p>
+		<h2>Aantal punten:</h2>
+		<p id="punten">
+			
+		</p>
+    </body>
+    </html>

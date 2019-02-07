@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Opgave 101</title>
+		<script src="dom-events.js"></script>
+		<script>
+			document.write('<form name="klok"> ' + '<input type="text" ' +
+			'name="display" '+ 'size="8" '+
+			'style="background-color: #30CE28; font-size: 44px"> ' + '</form>');
+			var nu = new Date();
+			var uur = nu.getHours();
+			var min = nu.getMinutes();
+			var sec = nu.getSeconds();
+			var alterneren = 0;
+			function showklok() {
+				min=((min < 10) ? '0': '') + min;
+				if(alterneren) {
+				document.klok.display.value=uur + ':' + min + ':' + sec;
+				alterneren = 0;
+				} else {
+				document.klok.display.value=uur + ':' + min + ':' + sec;
+				alterneren = 1;
+				}
+				nu = new Date(); uur = nu.getHours(); min = nu.getMinutes(); sec = nu.getSeconds();
+				setTimeout('showklok()',1000);
+			}
+		</script>
+		</head>
+	<body onload="showklok();">
+		<div>
+		<a href="Javascript: showMedia();">
+		<img src="ipad.jpg" id="media"
+			onmouseover="this.width=this.width*1.5"
+			onmouseout="this.width=this.width/1.5">
+		</a>
+	</body>
+</html>

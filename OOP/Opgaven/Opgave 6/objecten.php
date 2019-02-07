@@ -1,0 +1,17 @@
+<html>
+<head>
+	<?php include("klassen.php"); ?>
+	<title>OO PHP</title>
+</head>
+<body>
+<?php
+	$umut = new Persoon("Umut",18,"man");
+	$demirel = new Persoon("Demirel",23,"man");
+	$niels = new Persoon("Niels",17,"man");
+	$thamara = new Persoon("Thamara",18,"vrouw");
+?>
+<?php
+	unset($umut);
+?>
+</body>
+</html>
