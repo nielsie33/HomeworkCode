@@ -1,0 +1,32 @@
+/*
+ Theme Name:   Banana Child Theme
+ Theme URI:    http://localhost/
+ Description:  Banana Child Theme
+ Author:       Niels Van Hamme
+ Author URI:   http://localhost/
+ Template:     Banana
+ Version:      1.0.0
+ Tags:         plaats, hier, jouw, tags, gescheiden, door, kommas
+ Text Domain:  Banana_child
+*/
+
+@import url("../Banana/style.css");
+/* =Eigen CSS hier beneden plaatsen
+-------------------------------------------------------------- */
+
+@font-face{
+    font-family: 'BEBAS';
+    src: url('BEBAS.ttf');
+}
+
+body{
+    font-family:BEBAS !important;
+}
+
+.sidebar {
+	background-color:orange;
+}
+
+.bg-weekbanana {
+	background-color:green;
+}

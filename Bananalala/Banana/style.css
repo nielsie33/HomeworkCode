@@ -1,0 +1,199 @@
+/* Begin CSS */
+
+/* Fonts and Text */
+@font-face{
+    font-family: 'BEBAS';
+    src: url('BEBAS___.ttf');
+}
+
+h1 {
+	font-family: BEBAS;
+}
+
+h2 {
+	font-family: BEBAS;
+}
+
+h3 {
+	font-family: BEBAS;
+}
+
+h4 {
+	font-family: BEBAS;
+}
+
+h5 {
+	font-family: BEBAS;
+}
+
+pag {
+	font-size:16pt;
+	text-decoration:none;
+	color:black;
+}
+
+.bananaTitle {
+	font-size: 4rem;
+}
+
+.widgettitle {
+	font-size: 2.5rem!important;
+}
+
+.noFont {
+	font-family:none!important;
+}
+/* End Fonts and Text */
+
+/* General */
+body {
+	background-color: #F6F4F5!important;
+	width: 100%;
+}
+/* End General */
+
+/* Footer */
+footer {
+	background-color: #202021;
+	color:white;
+	text-align: center;
+	padding: 3%;
+}
+
+.recent-posts-extended {
+	list-style-type:none;
+}
+/* End Footer */
+
+/* Sidebar */
+.sidebar {
+	background-color: grey;
+	list-style-type:none;
+	color:white;
+}
+
+ul {
+	color:#f2d513;
+	font-size:18pt;
+}
+
+li a {
+	color:white;
+	font-size:14pt;
+	text-decoration:none; 
+}
+
+li a:hover {
+	color:#f2d513;
+	text-decoration:none; 
+}
+
+#s {
+	color: #999999;
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	padding: 0.4rem;
+	border:none;
+	border-radius:5px;
+	width:75%;
+	margin-bottom:1rem;
+	transition-duration: 400ms;
+	transition-property: width, background;
+	transition-timing-function: ease; 
+	/* Safari and Chrome */
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-property: width, background;
+	-webkit-transition-timing-function: ease;  
+}
+
+.screen-reader-text {
+	display:none;
+}
+
+#searchsubmit {
+	background-image: url('img/magnifying_glass.png');
+	border: none;
+	height: 2.20rem;
+	width: 2.91rem;
+	background-repeat:no-repeat;
+}
+/* End Sidebar */
+
+/* Menu */
+.nav-link:hover {
+	background-color: #f2d513;
+    cursor: pointer;
+	color:black;
+}
+
+.nav-link {
+	color: black;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f5f4f4;
+    border-radius: 1rem 1rem 0 0;
+    font-family: bebas !important;
+    font-size: 26pt;
+	height:100%;
+	padding:1.25rem!important;
+}
+
+.navbar {
+	padding:0!important;
+}
+
+.current-menu-item a {
+	background-color: #f2d513!important;
+}
+
+.dropdown-item {
+	font-family: BEBAS;
+}
+
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
+	background-color: #f2d513!important;
+}
+
+.hamburger {
+	width:2.5rem;
+}
+/* End Menu */
+
+/* Colors */
+.bg-weekbanana {
+	background-color: #F3D513;
+}
+
+.bg-readmore {
+	background-color: #F3D513!important;
+}
+
+.grayscale { 
+	filter: grayscale(100%); 
+}
+/* End Colors */
+
+/* Media Queries */
+@media only screen and (max-width: 992px) {
+	body {
+		max-width: 100%;
+	}
+	.imgnone {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	body {
+		max-width: 100%;
+	}
+	.ml-responsive {
+		margin-left:0rem!important;
+	}
+	.nav-link {
+		border-radius: 0 0 0 0;
+	}
+}
+/* End Media Queries */
+
+/* End CSS */
