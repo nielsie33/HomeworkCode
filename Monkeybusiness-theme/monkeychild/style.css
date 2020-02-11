@@ -1,0 +1,60 @@
+/*
+ Theme Name:     Monkey Business Child Theme
+ Theme URI:      
+ Description:    Monkey Business Child Theme
+ Author:         Niels
+ Author URI:     
+ Template:       monkeybusiness
+ Version:        1.0.0
+*/
+ 
+@import url("../monkeybusiness/style.css");
+ 
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+#uniekid {
+	color: darkgray;
+	background-color:black;
+	border: 3px solid green;
+}
+
+footer {
+	background-color: lightblue;
+}
+
+.menu-item:hover {
+	background-color:darkgray;
+}
+
+#menu-apen li a {
+    color: lightblue;
+    text-align: center;
+    text-decoration: none;
+}
+
+.current-menu-item a {
+	background-color: darkgray;
+	color:darkblue !important;
+	border: 1px solid transparent;
+}
+
+.sidebar {
+	background-color: blue;
+	padding:2%;
+	width: 300px;
+	margin-bottom:3%;
+	list-style-type: none;
+}
+
+p {
+	color:#70ff85;
+}
+
+h2 {
+	font-size: 60px !important;
+}
+
+.block {
+	color:#70ff85;
+}
